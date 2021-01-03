@@ -1,10 +1,6 @@
 import os
 from pathlib import Path
 
-
-MAIN_PROJECT = os.path.dirname(__file__)
-
-BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '#swf*bjgu+!x-k-#-r3%g+dmd3im)-s!jug5i*ir0q%4i4*f23'
 DEBUG = True
 ALLOWED_HOSTS = ["*"]
@@ -31,6 +27,10 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'kgustaCollegeDjango.urls'
+
+MAIN_PROJECT = os.path.dirname(__file__)
+
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 TEMPLATES = [
     {
@@ -95,13 +95,13 @@ USE_TZ = True
 
 STATIC_ROOT = ''
 STATIC_URL = '/static/'
-# STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
-STATICFILES_DIRS = (
-    os.path.join(MAIN_PROJECT, 'static/'),
-)
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+GDAL_LIBRARY_PATH = os.environ.get('GDAL_LIBRARY_PATH')
+GEOS_LIBRARY_PATH = os.environ.get('GEOS_LIBRARY_PATH')
 
 
 CKEDITOR_UPLOAD_PATH = "uploads/"
