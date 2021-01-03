@@ -1,1 +1,1 @@
-web: gunicorn <kgustaCollegeDjango(containing wsgi)>.wsgi --log-file -
+web: gunicorn kgustaCollegeDjango.wsgi --log-file -
