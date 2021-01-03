@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+    <div class="container">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="row">
+            {% for table in tables %}
+                <div class="card">
+                    <div class="card-header">
+                        Расписание для {{ table.course }} - курса
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Расписание обновлено в {{ table.date_of_installed }}</h5>
+                        <br>
+                        <p class="card-text">Чтобы скачать расписание, нажмите на кнопку "Скачать"!</p>
+                        <br>
+                        <a href="{{ table.table_time.url }}" class="btn btn-primary rounded-pill text-white">
+                                Скачать </a>
+                    </div>
+                </div>
+            {% endfor %}
+
+
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+
+{% endblock %}

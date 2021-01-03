@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <div class="container my-5">
+
+
+        <!--Section: Content-->
+        <section class="dark-grey-text">
+
+            <!-- Section heading -->
+            <h3 class="text-center font-weight-bold mb-4 pb-2">КГУСТА ИМ. Н.
+                ИСАНОВА
+            </h3>
+            <hr class="w-header">
+            <!-- Section description -->
+            <p class="lead text-center w-responsive mx-auto text-muted mt-4 pt-2 mb-5">
+                СПО (Колледж) Кыргызского
+                государственного университета строительства, транспорта и
+                архитектуры им. Н. Исанова</p>
+
+            <!--First row-->
+            <div class="row">
+                {% for department in departments %}
+                    <div class="col-12 mb-4">
+                        <a href="{% url 'department_detail' department.id %}"
+                           class="card hoverable">
+                            <div class="card-body">
+                                <div class="row text-sm-center text-md-left">
+              <span class="col-sm-12 col-md-1 text-sm-center text-md-left rounded-circle">
+                <i class="fas fa-graduation-cap" style="font-size: 48px;"></i>
+              </span>
+                                    <div class=" media-body col-sm-12 col-md-11">
+                                        <h3 class="dark-grey-text mt-3 h1"
+                                            style="font-family: 'BebasNeue'; font-size: 25px;">{{ department.title }}</h3>
+                                        {#                                        <p class="font-weight-light text-muted mb-0">{{ department.description|safe }}</p>#}
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+
+            </div>
+        </section>
+
+
+    </div>
+
+{% endblock %}

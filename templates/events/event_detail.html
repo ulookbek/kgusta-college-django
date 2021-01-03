@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+It is {% now "jS F Y H:i" %}
+{% now "Y" as current_year %}
+
+
+{% block content %}
+
+    <div class="divider"></div>
+
+    <div class="content">
+        <div class="container">
+
+            <div class="main-content">
+                <h1>Cобытия:</h1>
+                    <article>
+                        <div class="current-date">
+                            <p>{{ event.month }}</p>
+                            <p class="date">{{ event.date_number }}</p>
+                        </div>
+                        <div class="info">
+                            <h3>{{ event.title }}</h3>
+                            <p class="info-line"><span
+                                    class="time">{{ event.date_time }}</span><span
+                                    class="place">{{ event.adress }}</span></p>
+                            <p>{{ event.description }}</p>
+                        </div>
+                    </article>
+
+            </div>
+
+            <aside id="sidebar">
+                <div class="widget list">
+                    <h2>Photo gallery</h2>
+                    <div class="btn-holder">
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+    </div>
+
+
+{% endblock %}

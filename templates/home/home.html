@@ -1,0 +1,144 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+    <br>
+    <div class="slider">
+        <ul class="bxslider">
+            <li>
+                <div class="container">
+                    <div class="info">
+                        <h2>Добро пожаловать! <br><span>в колледж Кгуста</span>
+                        </h2>
+                        <a href="#">Вы абитуриент?</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="container">
+                    <div class="info">
+                        <h2>У нас учатся более<br><span>1000+ студентов</span>
+                        </h2>
+                        <a href="#">Выбрать специальность >> </a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="container">
+                    <div class="info">
+                        <h2>Здесь можно подставить
+                            <br><span>Какой то текст</span></h2>
+                        <a href="#">И здесь тоже</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="bg-bottom"></div>
+    </div>
+
+
+
+    <section class="posts">
+        <div class="container">
+            <article>
+                <div class="info">
+                    <h3>СПО (Колледж) Кыргызского государственного университета
+                        строительства, транспорта и архитектуры
+                        им. Н. Исанова</h3>
+                    <p>структурное подразделение университета, ориентированное
+                        на высокое качество обучения и
+                        всестороннее воспитание личности. Колледж открыт в 2016
+                        году для осуществления образовательной
+                        деятельности в сфере среднего профессионального
+                        образования.</p>
+                </div>
+            </article>
+            <article>
+                <div class="info">
+                    <h3>Наша Миссия <br> СПО (Колледж) <br> КГУСТА ИМ. Н.
+                        ИСАНОВА</h3>
+                    <p>Внесение достойного вклада в иновационное развитие
+                        республики, удовлетворение потребностей
+                        общества и рынка труда в конкурентноспособных
+                        специалистах среднего звена в области архитектуры,
+                        строительства, транспорта, экономики, менеджмента и
+                        инфрмационных технологий.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <br>
+    <br>
+    <br>
+
+    <section class="news">
+        <div class="container">
+            <h2>Новости</h2>
+            <article>
+                <div class="pic"><img src="{% static './images/kgusta_bG_3.jpg' %}" alt="" style="max-width: 190px"></div>
+                <div class="info">
+                    <h4>А это заголовок этих новостей для колледжа</h4>
+                    <p class="date">Здесь дата 12\12\2020</p>
+                    <p>А тут уже какое то описание под эту новость, короче тоже
+                        бессмысленно</p>
+                    <a class="more" href="#">Читать больше</a>
+                </div>
+            </article>
+            <article>
+                <div class="pic"><img src="{% static './images/kgusta_bG_3.jpg' %}" alt="" style="max-width: 190px"></div>
+                <div class="info">
+                    <h4>А это заголовок этих новостей для колледжа</h4>
+                    <p class="date">Здесь дата 12\12\2020</p>
+                    <p>А тут уже какое то описание под эту новость, короче тоже
+                        бессмысленно</p>
+                    <a class="more" href="#">Читать больше</a>
+                </div>
+            </article>
+            <div class="btn-holder">
+                <a class="btn" href="#">Посмотреть все новости</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="events">
+        <div class="container">
+            <h2>События или мероприятия</h2>
+            {% for event in events %}
+                <article>
+                    <div class="current-date">
+                        <p>{{ event.month }}</p>
+                        <p class="date">{{ event.date_number }}</p>
+                    </div>
+                    <div class="info">
+                        <p>{{ event.title }}</p>
+                        <a class="more"
+                           href="{% url 'events_detail' event.id %}">Читать
+                            больше</a>
+                    </div>
+                </article>
+            {% endfor %}
+            <div class="btn-holder">
+                <a style="background-color: #008bc3" class="btn text-white"
+                   href="#">Посмотреть все объявления или события</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div class="container">
+        <a href="#fancy" class="info-request">
+			<span class="holder">
+				<span class="title">Обратная связь</span>
+				<span class="text">Хотите получить обратную связь? Пожалуйста кликните сюда >></span>
+			</span>
+            <span class="arrow"></span>
+        </a>
+    </div>
+
+
+
+{% endblock %}

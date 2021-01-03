@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <style>
+        .about_us_boxes {
+            text-transform: uppercase;
+        }
+
+        .about_us_boxes:hover {
+            background-color: #0f74a8;
+            color: white;
+            transition: all ease-out 0.5s;
+            cursor: pointer;
+        }
+
+        .about_us_title {
+            font-size: 30px;
+            color: #7e8798;
+            font-family: "BebasNeue";
+        }
+    </style>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title text-center wow zoomIn">
+                    <h1 class="text-center">О НАС</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center">
+            {% for aboutUs in about_us_info %}
+                <a href="{{ aboutUs.file.url }}"
+                   class="col-7 about_us_boxes rounded-pill shadow py-4 px-2 my-1 mx-auto">
+                    <h4 class="about_us_title">{{ aboutUs.title }}</h4>
+                </a>
+            {% endfor %}
+
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+{% endblock %}
