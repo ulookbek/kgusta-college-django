@@ -1,6 +1,8 @@
 import os
 from pathlib import Path
 
+from django.contrib import staticfiles
+
 SECRET_KEY = '#swf*bjgu+!x-k-#-r3%g+dmd3im)-s!jug5i*ir0q%4i4*f23'
 DEBUG = True
 ALLOWED_HOSTS = ["*"]
@@ -93,9 +95,13 @@ USE_L10N = True
 
 USE_TZ = True
 
-STATIC_ROOT = ''
+BASE_DIR2 = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+STATIC_ROOT = os.path.join(BASE_DIR2, 'staticfiles')
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+STATICFILES_DIRS = (os.path.join(BASE_DIR2, 'static'),)
+
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
