@@ -26,7 +26,8 @@ def students(request):
     return render(request, 'students/students.html', {"students": students})
 
 def abitur(request):
-    info = ForEnrollee.objects.all()
+    # info = ForEnrollee.objects.all()
+    info = ForStudents.objects.all()
     return render(request, 'enrollee/enrollee.html', {"enrollees": info})
 
 
