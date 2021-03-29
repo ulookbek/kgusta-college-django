@@ -44,7 +44,6 @@ class Events(models.Model):
 class Departments(models.Model):
     title = models.CharField('Название отделения', max_length=80, blank=False)
     description = models.TextField('Описание', blank=True)
-    staff = models.ManyToManyField(Teachers)
 
     def __str__(self):
         return self.title
@@ -96,3 +95,25 @@ class OurGallery(models.Model):
     class Meta:
         verbose_name = "Наша галерея"
         verbose_name_plural = "Наша галерея"
+
+class ForEnrollee(models.Model):
+    title = models.CharField('Название отделения', max_length=80, blank=False)
+    description = models.TextField('Описание', blank=True)
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = "Абитуриентам"
+        verbose_name_plural = "Абитуриентам"
+
+class ForStudents(models.Model):
+    title = models.CharField('Название отделения', max_length=80, blank=False)
+    description = models.TextField('Описание', blank=True)
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = "Студентам"
+        verbose_name_plural = "Студентам"

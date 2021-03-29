@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 from kgustaCollege.models import Teachers, Events, Departments, News, AboutUs, \
-    OurGallery
+    OurGallery, ForEnrollee, ForStudents
 
 
 def main(request):
@@ -17,10 +17,13 @@ def about_us(request):
     return render(request, 'aboutUs/aboutUs.html',
                   {"about_us_info": about_us_info})
 
+def enrollees(request):
+    enrollees = ForEnrollee.objects.all()
+    return render(request, 'enrollee/enrollee.html', {"enrollees": enrollees})
 
-def gallery(request):
-    images = OurGallery.objects.all()
-    return render(request, 'gallery/gallery.html', {"images": images})
+def students(request):
+    students = ForStudents.objects.all()
+    return render(request, 'students/students.html', {"students": students})
 
 
 def timetable(request):
@@ -77,8 +80,4 @@ def teachers(request):
         "teachers": all_teachers,
     }
     return render(request, 'teachers/teachers.html', context)
-
-
-def students(request):
-    return render(request, 'students/students.html')
 

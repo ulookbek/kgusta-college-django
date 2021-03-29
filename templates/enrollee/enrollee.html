@@ -3,13 +3,13 @@ current_year %} {% block content %}
 <div class="divider"></div>
 <div class="content">
   <div class="container">
-    <h1>Для студентов:</h1>
+    <h1>Для абитуриентов:</h1>
     <section class="posts-con">
-      {% for student in students %}
+      {% for enrollee in enrollees %}
       <article>
         <div class="info">
-          <h3>{{ student.title }}</h3>
-          <p>{{ student.description|safe }}</p>
+          <h3>{{ enrollee.title }}</h3>
+          <p>{{ enrollee.description|safe }}</p>
         </div>
       </article>
       {% endfor %}

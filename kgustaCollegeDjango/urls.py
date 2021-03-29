@@ -6,7 +6,6 @@ from django.conf import settings
 
 urlpatterns = [
                   path('', views.main, name='mainPages'),
-                  path('gallery/', views.gallery, name='gallery'),
                   path('about-us/', views.about_us, name='about-us'),
                   path('timetable/', views.timetable, name='timetable'),
                   path('contacts/', views.contacts, name='contacts'),
@@ -19,6 +18,7 @@ urlpatterns = [
                        name='department_detail'),
                   path('teachers/', views.teachers, name='teachers'),
                   path('students/', views.students, name='students'),
+                  path('enrollees/', views.enrollees, name='enrollees'),
                   path('admin/', admin.site.urls),
                   path('ckeditor/', include('ckeditor_uploader.urls')),
                   path('teacher_detail/<int:id>/', views.teacher_detail,
