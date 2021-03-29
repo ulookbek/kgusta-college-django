@@ -1,6 +1,4 @@
 $(document).ready(function () {
-
-
     $('a.page-scroll').on('click', function (e) {
         var anchor = $(this);
         $('html, body').stop().animate({
@@ -136,15 +134,41 @@ document.addEventListener("DOMContentLoaded", function (event) {
             teacher_description[i].innerHTML = kitcut(teacher_description[i].innerHTML, 50);
         }
     }
+
+    $('#myCarousel .carousel-item img').on('click', function (e) {
+        var src = $(e.target).attr('data-remote');
+        if (src) $(this).ekkoLightbox();
+    });
+
+    let aboutus = document.getElementById('aboutus')
+    let aboutusmenu = document.getElementById('aboutusmenu')
+    let aboutcollege = document.getElementById('aboutcollege')
+    let aboutcollegeMenu = document.getElementById('aboutcollegeMenu')
+    aboutus.addEventListener('mouseenter', () => {
+        aboutusmenu.style.display = 'flex'
+    })
+    aboutus.addEventListener('mouseleave', () => {
+        aboutusmenu.style.display = 'none'
+    })
+    aboutcollege.addEventListener('mouseenter', () => {
+        aboutcollegeMenu.style.display = 'flex'
+    })
+    aboutcollege.addEventListener('mouseleave', () => {
+        aboutcollegeMenu.style.display = 'none'
+    })
 });
 
 
-$('#myCarousel').carousel({
-    interval: false
-});
-$('#carousel-thumbs').carousel({
-    interval: false
-});
+try {
+    $('#myCarousel').carousel({
+        interval: false
+    });
+    $('#carousel-thumbs').carousel({
+        interval: false
+    });
+} catch (e) {
+    console.log(e)
+}
 
 // handles the carousel thumbnails
 // https://stackoverflow.com/questions/25752187/bootstrap-carousel-with-thumbnails-multiple-carousel
@@ -176,30 +200,28 @@ $('#myCarousel').on('slide.bs.carousel', function (e) {
     $('[id=carousel-selector-' + id + ']').addClass('selected');
 });
 // when user swipes, go next or previous
-$('#myCarousel').swipe({
-    fallbackToMouseEvents: true,
-    swipeLeft: function (e) {
-        $('#myCarousel').carousel('next');
-    },
-    swipeRight: function (e) {
-        $('#myCarousel').carousel('prev');
-    },
-    allowPageScroll: 'vertical',
-    preventDefaultEvents: false,
-    threshold: 75
-});
+try {
+    $('#myCarousel').swipe({
+        fallbackToMouseEvents: true,
+        swipeLeft: function (e) {
+            $('#myCarousel').carousel('next');
+        },
+        swipeRight: function (e) {
+            $('#myCarousel').carousel('prev');
+        },
+        allowPageScroll: 'vertical',
+        preventDefaultEvents: false,
+        threshold: 75
+    });
+} catch (e) {
+    console.log(e)
+}
 /*
 $(document).on('click', '[data-toggle="lightbox"]', function(event) {
   event.preventDefault();
   $(this).ekkoLightbox();
 });
 */
-
-$('#myCarousel .carousel-item img').on('click', function (e) {
-    var src = $(e.target).attr('data-remote');
-    if (src) $(this).ekkoLightbox();
-});
-
 
 
 

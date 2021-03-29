@@ -204,7 +204,7 @@ a:hover {
 }
 
 #menu ul {
-    padding: 0 80px;
+    padding: 0 100px;
     display: inline-block;
 }
 
@@ -1109,27 +1109,31 @@ a.btn.blue,
     overflow: hidden;
 }
 
-#footer .cols-3 li a:after {
-    background: #81c6e2 url(../images/ico_social.png) no-repeat 9px 8px;
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 35px;
-}
+/*#footer .cols-3 li a:after {*/
+/*    background: #81c6e2 url(../images/ico_social.png) no-repeat 9px 8px;*/
+/*    position: absolute;*/
+/*    content: "";*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    bottom: 0;*/
+/*    width: 35px;*/
+/*}*/
 
-#footer .cols-3 .google-plus a:after {
-    background-position: -26px 8px;
-}
+/*#footer .cols-3 .google-plus a:after {*/
+/*    background-position: -26px 8px;*/
+/*}*/
 
-#footer .cols-3 .twitter a:after {
-    background-position: 9px -27px;
-}
+/*#footer .cols-3 .twitter a:after {*/
+/*    background-position: 9px -27px;*/
+/*}*/
 
-#footer .cols-3 .pinterest a:after {
-    background-position: -26px -27px;
-}
+/*#footer .cols-3 .instagram a:after {*/
+/*    background-position: 9px -27px;*/
+/*}*/
+
+/*#footer .cols-3 .pinterest a:after {*/
+/*    background-position: -26px -27px;*/
+/*}*/
 
 #footer input {
     border-radius: 4px;

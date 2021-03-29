@@ -23,6 +23,33 @@
     <title>КГУСТА</title>
 </head>
 <body>
+<style>
+    #aboutusmenu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 25px;
+        left: -10px;
+        background: white;
+        border: 1px solid #c3c3c3;
+        padding: 5px 0;
+        box-shadow: 0 10px 5px 3px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+    }
+
+    #aboutcollegeMenu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 25px;
+        left: -10px;
+        background: white;
+        border: 1px solid #c3c3c3;
+        padding: 5px 0;
+        box-shadow: 0 10px 5px 3px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+    }
+</style>
 <header id="header">
     <div class="container">
         <a href="/" id="logo" title="HarrisonHighSchool">KGUSTA</a>
@@ -30,19 +57,43 @@
         <nav id="menu">
             <ul>
                 <li><a href="{% url 'events' %}">События</a></li>
-                <li><a href="{% url 'departments' %}">Отделения</a></li>
-                <li><a href="{% url 'teachers' %}">Учителя</a></li>
+                <li id="aboutus" style="position: relative">
+                    <a href="#">О нас</a>
+                    <ol id="aboutusmenu" style="text-align: left">
+                        <li>
+                            <a href="{% url 'teachers' %}">Преподователи</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'gallery' %}">Галерея</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'gallery' %}">Абитуриентам</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'gallery' %}">cСтудентам</a>
+                        </li>
+                    </ol>
+                </li>
                 <li><a href="http://spo.ksucta.kg/" target="_blank">EBilim</a>
                 </li>
             </ul>
             <ul>
                 <li><a href="{% url 'news' %}">Новости</a></li>
-                <li><a
-                        href="{% url 'gallery' %}"
-{#                        href="#"#}
-                >Галерея</a></li>
+
                 <li><a href="#fancy" class="get-contact">Контакты</a></li>
-                <li><a href="{% url 'about-us' %}" class="get-contact">О нас</a></li>
+                {#                <li><a href="{% url 'about-us' %}" class="get-contact">О нас</a>#}
+                </li>
+                <li id="aboutcollege" style="position: relative">
+                    <a href="#">О колледже</a>
+                    <ol id="aboutcollegeMenu" style="text-align: left">
+                        <li>
+                            <a href="{% url 'teachers' %}">Преподователи</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'gallery' %}">Галерея</a>
+                        </li>
+                    </ol>
+                </li>
             </ul>
         </nav>
     </div>
@@ -99,11 +150,10 @@
             <article class="cols-3 col-4">
                 <h3>Мы в соц. сетях</h3>
                 <ul>
-                    <li class="facebook"><a href="#">Facebook</a></li>
-                    <li class="google-plus"><a href="#">Google+</a></li>
-                    <li class="twitter"><a href="#">Twitter</a></li>
-                    <li class="instagram"><a
-                            href="https://www.instagram.com/college_ksucta.kg/">Instagram</a>
+{#                    <li class="facebook"><a href="#">Facebook</a></li>#}
+{#                    <li class="google-plus"><a href="#">Google+</a></li>#}
+{#                    <li class="twitter"><a href="#">Twitter</a></li>#}
+                    <li class=""><a href="https://www.instagram.com/college_ksucta.kg/"><img style="width: 24px; position: absolute; top: 6px; left: 9px" src="https://cdn2.iconfinder.com/data/icons/social-icons-grey/512/INSTAGRAM-512.png" alt="">Instagram</a>
                     </li>
                 </ul>
             </article>
@@ -122,14 +172,13 @@
         <p class="copy">СПО (Колледж) Кыргызского Государственного Университета
             Строительства Транспорта и Архитектуры
             им. Н. Исанова.
-            <a href=""
-               target="_blank">Copyright © 2020. </a>Все права защищены.</p>
+            <a href="" target="_blank">Copyright © 2020. </a>Все права защищены.</p>
     </div>
 </footer>
 
 
-<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="{% static '/js/plugins.js' %}"></script>
-<script src="{% static '/js/main.js' %}"></script>
+<script defer src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script defer src="{% static 'js/plugins.js' %}"></script>
+<script defer src="{% static 'js/main.js' %}"></script>
 </body>
 </html>
