@@ -72,20 +72,6 @@
           <ul>
             <li><a href="{% url 'events' %}">События</a></li>
             <li><a href="{% url 'departments' %}">О колледже</a></li>
-
-            {% comment %}
-            <li id="aboutcollege" style="position: relative">
-              <a href="#">О колледже</a>
-              <ol id="aboutcollegeMenu" style="text-align: left">
-                <li>
-                  <a href="{% url 'teachers' %}">Преподователи</a>
-                </li>
-                <li>
-                  <a href="{% url 'gallery' %}">Галерея</a>
-                </li>
-              </ol>
-            </li>
-            {% endcomment %}
             <li>
               <a href="http://spo.ksucta.kg/" target="_blank">EBilim</a>
             </li>
@@ -99,17 +85,14 @@
                 <li>
                   <a href="{% url 'teachers' %}">Преподователи</a>
                 </li>
-                {% comment %}
-                <li>
-                  <a href="{% url 'gallery' %}">Галерея</a>
-                </li>
-                {% endcomment %}
                 <li>
                   <a href="{% url 'students' %}">Студентам</a>
                 </li>
+                {% comment %}
                 <li>
                   <a href="{% url 'abitur' %}">Абитуриентам</a>
                 </li>
+                {% endcomment %}
               </ol>
             </li>
           </ul>
