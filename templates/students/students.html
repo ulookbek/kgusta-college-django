@@ -15,6 +15,19 @@ current_year %} {% block content %}
       {% endfor %}
     </section>
   </div>
+  <div class="container">
+    <h1>Для абитуриентов:</h1>
+    <section class="posts-con">
+      {% for enrollee in enrollees %}
+      <article>
+        <div class="info">
+          <h3>{{ enrollee.title }}</h3>
+          <p>{{ enrollee.description|safe }}</p>
+        </div>
+      </article>
+      {% endfor %}
+    </section>
+  </div>
 </div>
 
-{% endblock %}
+{% endblock %} 

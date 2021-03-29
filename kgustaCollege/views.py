@@ -23,12 +23,8 @@ def about_us(request):
 
 def students(request):
     students = ForStudents.objects.all()
-    return render(request, 'students/students.html', {"students": students})
-
-def abiturent(request):
-    info = ForEnrollee.objects.all()
-    return render(request, 'enrollee/enrollee.html', {"enrollees": info})
-
+    enrollees = ForEnrollee.objects.all()
+    return render(request, 'students/students.html', {"students": students, "enrollees": enrollees})
 
 def timetable(request):
     return render(request, 'timetable/timetable.html')
