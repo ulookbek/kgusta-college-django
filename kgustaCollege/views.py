@@ -17,13 +17,17 @@ def about_us(request):
     return render(request, 'aboutUs/aboutUs.html',
                   {"about_us_info": about_us_info})
 
-def abiturentos(request):
-    a = ForEnrollee.objects.all()
-    return render(request, 'enrollee/enrollee.html', {"enrollees": a})
+# def abiturentos(request):
+#     a = ForEnrollee.objects.all()
+#     return render(request, 'enrollee/enrollee.html', {"enrollees": a})
 
 def students(request):
     students = ForStudents.objects.all()
     return render(request, 'students/students.html', {"students": students})
+
+def abitur(request):
+    info = ForEnrollee.objects.all()
+    return render(request, 'enrollee/enrollee.html', {"enrollees": info})
 
 
 def timetable(request):
