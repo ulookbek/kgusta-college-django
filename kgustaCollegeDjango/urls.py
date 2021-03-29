@@ -18,7 +18,7 @@ urlpatterns = [
                        name='department_detail'),
                   path('teachers/', views.teachers, name='teachers'),
                   path('students/', views.students, name='students'),
-                  path('enrollees/', views.enrollee, name='enrollees'),
+                  path('abiturent/', views.enrollee, name='abiturent'),
                   path('admin/', admin.site.urls),
                   path('ckeditor/', include('ckeditor_uploader.urls')),
                   path('teacher_detail/<int:id>/', views.teacher_detail,
