@@ -31,7 +31,6 @@ class StudentsAdminForm(forms.ModelForm):
         fields = '__all__'
 
 
-
 @admin.register(Teachers)
 class CollegeAdmin(admin.ModelAdmin):
     pass
@@ -41,32 +40,22 @@ class CollegeAdmin(admin.ModelAdmin):
 class CollegeAdmin(admin.ModelAdmin):
     pass
 
-
+@admin.register(Departments)
 class CollegeAdmin(admin.ModelAdmin):
     form = DepartmentsAdminForm
 
+@admin.register(ForEnrollee)
 class CollegeAdmin(admin.ModelAdmin):
     form = EnrolleesAdminForm
 
+@admin.register(ForStudents)
 class CollegeAdmin(admin.ModelAdmin):
     form = StudentsAdminForm
-
-
-admin.site.register(Departments, CollegeAdmin)
-admin.site.register(ForEnrollee, CollegeAdmin)
-admin.site.register(ForStudents, CollegeAdmin)
-
 
 @admin.register(Events)
 class CollegeAdmin(admin.ModelAdmin):
     pass
 
-
-# @admin.register(AboutUs)
-# class CollegeAdmin(admin.ModelAdmin):
-#     pass
-
-
-# @admin.register(OurGallery)
-# class CollegeAdmin(admin.ModelAdmin):
-#     pass
+# admin.site.register(Departments, CollegeAdmin)
+# admin.site.register(ForEnrollee, CollegeAdmin)
+# admin.site.register(ForStudents, CollegeAdmin)
