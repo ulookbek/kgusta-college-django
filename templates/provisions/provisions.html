@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+<div class="container my-5">
+    <section class="dark-grey-text">
+        <h3 class="text-center font-weight-bold mb-4 pb-2">Положения
+        </h3>
+        <hr class="w-header">
+        <div class="row">
+            {% include "provisions/provisions.component.html" with title="1. Положение о СПО (Колледж) КГУСТА им. Н.Исанова" link="/files/provisions/положение-1.pdf" %}
+            {% include "provisions/provisions.component.html" with title="2. Этический кодекс СПО (Колледж)" link="/files/provisions/2. Этический кодекс СПО.pdf" %}
+            {% include "provisions/provisions.component.html" with title="3. Порядок о рассмотрении и утверждении ООП СПО (КОЛЛЕДЖ)" link="/files/provisions/3.Порядок о рассмотрении и утверждении ООП СПО (КОЛЛЕДЖ).pdf" %}
+            {% include "provisions/provisions.component.html" with title="4.Порядок приема студентов в КГУСТА им.Н.Исанова по программам СПО 19-20" link="/files/provisions/4.Порядок приема студентов в КГУСТА им.Н.Исанова по программам СПО 19-20.pdf" %}
+            {% include "provisions/provisions.component.html" with title="5.Положение о порядке зачета результатов освоения обучающимся СПО (Колледж) КГУСТА им.Н.Исанова" link="/files/provisions/5.Положение о порядке зачета результатов освоения обучающимся СПО (Колледж) КГУСТА им.Н.Исанова.pdf" %}
+            {% include "provisions/provisions.component.html" with title="6.Положение о порядке перевода, отчисления, восстановления студентов СПО (Колледж) КГУСТА" link="/files/provisions/6.Положение о порядке перевода, отчисления, восстановления студентов СПО (Колледж) КГУСТА.pdf" %}
+            {% include "provisions/provisions.component.html" with title="7.Положение об ИГА выпускников СПО (Колледжа) КГУСТА" link="/files/provisions/7.Положение об ИГА выпускников СПО (Колледжа) КГУСТА.pdf" %}
+            {% include "provisions/provisions.component.html" with title="8.Положение об апелляции и работы апелляционной комиссии СПО (Колледж) КГУСТА" link="/files/provisions/8.Положение об апелляции и работы апелляционной комиссии СПО (Колледж) КГУСТА.pdf" %}
+            {% include "provisions/provisions.component.html" with title="9.Положение о внутренней системе оценки качества образования СПО (Колледж)" link="/files/provisions/9.Положение о внутренней системе оценки качества образования СПО (Колледж).pdf" %}
+            {% include "provisions/provisions.component.html" with title="10.Положение о комиссии раегир на жалоб" link="/files/provisions/10.Положение о комиссии раегир на жалоб.pdf" %}
+            {% include "provisions/provisions.component.html" with title="11.Положение о комиссии и профилактике правонарушений среди студентов СПО (Колледж)" link="/files/provisions/11.Положение о комиссии и профилактике правонарушений среди студентов СПО (Колледж).pdf" %}
+            {% include "provisions/provisions.component.html" with title="12.Положение о методическом совете СПО (Колледж)" link="/files/provisions/12.Положение о методическом совете СПО (Колледж).pdf" %}
+            {% include "provisions/provisions.component.html" with title="13.Положение о мониторинге деятельностиСПО (Колледж)" link="/files/provisions/13.Положение о мониторинге деятельностиСПО (Колледж).pdf" %}
+            {% include "provisions/provisions.component.html" with title="14. Порядок оценки достижения и корректировки целей и р.о. ОП СПО (Колледж)" link="/files/provisions/14. Порядок оценки достижения и корректировки целей и р.о. ОП СПО (Колледж).pdf" %}
+            {% include "provisions/provisions.component.html" with title="15. Положение о текущем контроле успеваемости и промежуточной аттестации" link="/files/provisions/15. Положение о текущем контроле успеваемости и промежуточной аттестации.pdf" %}
+            {% include "provisions/provisions.component.html" with title="16.ПОЛОЖЕНИЕ о УМК" link="/files/provisions/16.ПОЛОЖЕНИЕ о УМК.pdf" %}
+            {% include "provisions/provisions.component.html" with title="17.Положение о взаимопосещаемости" link="/files/provisions/17.Положение о взаимопосещаемости.pdf" %}
+            {% include "provisions/provisions.component.html" with title="18.Рейтинговая система оценки знаний студентов СПО (Колледж)" link="/files/provisions/18.Рейтинговая система оценки знаний студентов СПО (Колледж).pdf" %}
+             {% include "provisions/provisions.component.html" with title="19.Положение о воспитательной работе СПО (Колледж)" link="/files/provisions/19.Положение о воспитательной работе СПО (Колледж).pdf" %}
+              {% include "provisions/provisions.component.html" with title="20. Положение о кураторе" link="/files/provisions/20. Положение о кураторе.pdf" %}
+               {% include "provisions/provisions.component.html" with title="21. Положение о старосте" link="/files/provisions/21. Положение о старосте.pdf" %}
+            {% include "provisions/provisions.component.html" with title="22.Положение о практике СПО (Колледж) КГУСТА" link="/files/provisions/22.Положение о практике СПО (Колледж) КГУСТА.pdf" %}
+        </div>
+    </section>
+
+
+</div>
+
+{% endblock %}

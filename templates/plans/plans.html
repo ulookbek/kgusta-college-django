@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+<div class="container my-5">
+    <section class="dark-grey-text">
+        <h3 class="text-center font-weight-bold mb-4 pb-2">Планы мероприятий
+
+        </h3>
+        <hr class="w-header">
+        <div class="row">
+               {% include "plans/plans.component.html" with title="1_Стратегический_план_СПО_(Колледж)" link="/files/plans/1_Стратегический_план_СПО_(Колледж).pdf" %}
+               {% include "plans/plans.component.html" with title="2_План_работы_СПО_(Колледж)_2019-2020" link="/files/plans/2_План_работы_СПО_(Колледж)_2019-2020.pdf" %}
+               {% include "plans/plans.component.html" with title="3_План_заседаний Совета_СПО_на_2019-20" link="/files/plans/3_План_заседаний Совета_СПО_на_2019-20.pdf" %}
+               {% include "plans/plans.component.html" with title="4_План_методического_совета" link="/files/plans/4_План_методического_совета.pdf" %}
+               {% include "plans/plans.component.html" with title="5_План_воспитательной_и_организационной_работы_СПО_(Колледж)" link="/files/plans/5_План_воспитательной_и_организационной_работы_СПО_(Колледж).pdf" %}
+               {% include "plans/plans.component.html" with title="6_Состав_Совета_СПО_на_2019-20" link="/files/plans/6_Состав_Совета_СПО_на_2019-20.pdf" %}
+               {% include "plans/plans.component.html" with title="7_Состав_методического_состава" link="/files/plans/7_Состав_методического_состава.pdf" %}
+               {% include "plans/plans.component.html" with title="8_график_учебного_процесса" link="/files/plans/8_график_учебного_процесса.pdf" %}
+               {% include "plans/plans.component.html" with title="9_Академический_календарь_1-2-3_курсы_на_2019-20_уч_год" link="/files/plans/9_Академический_календарь_1-2-3_курсы_на_2019-20_уч_год.pdf" %}
+
+        </div>
+    </section>
+
+
+</div>
+
+{% endblock %}

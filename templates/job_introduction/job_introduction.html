@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+<div class="container my-5">
+    <section class="dark-grey-text">
+        <h3 class="text-center font-weight-bold mb-4 pb-2">Планы мероприятий
+
+        </h3>
+        <hr class="w-header">
+        <div class="row">
+            {% include "job_introduction/job_introduction.component.html" with title="1_Долж_инструкция_Директора_СПО(Колледж)КГУСТА" link="/files/introduction/1_Долж_инструкция_Директора_СПО(Колледж)КГУСТА.pdf" %}
+            {% include "job_introduction/job_introduction.component.html" with title="3_Долж. инструкцияЗам_ директора_по_производственному_обучению_и_гос_языку" link="/files/introduction/3_Долж. инструкцияЗам_ директора_по_производственному_обучению_и_гос_языку.pdf" %}
+            {% include "job_introduction/job_introduction.component.html" with title="4_Долж_инструкция_Руководителя_практики" link="/files/introduction/4_Долж_инструкция_Руководителя_практики.pdf" %}
+            {% include "job_introduction/job_introduction.component.html" with title="5_Долж_инструкцияЗаведующего_учебной_частью" link="/files/introduction/5_Долж_инструкцияЗаведующего_учебной_частью.pdf" %}
+            {% include "job_introduction/job_introduction.component.html" with title="6_Долж_инструкцияЗавотделением" link="/files/introduction/6_Долж_инструкцияЗавотделением.pdf" %}
+            {% include "job_introduction/job_introduction.component.html" with title="7_Долж_инструкцияВоенного_руководителя" link="/files/introduction/7_Долж_инструкцияВоенного_руководителя.pdf" %}
+            {% include "job_introduction/job_introduction.component.html" with title="8_Долж_инструкцияИнспектораПо_методической_работе" link="/files/introduction/8_Долж_инструкцияИнспектораПо_методической_работе.pdf" %}
+
+        </div>
+    </section>
+
+
+</div>
+
+{% endblock %}

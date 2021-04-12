@@ -1,192 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    {% load static %}
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="icon" href="{% static "/images/logo@2x.png" %}">
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"
-    ></script>
-    <link rel="stylesheet" media="all" href="{% static '/css/style.css' %}" />
-    <title>КГУСТА</title>
-  </head>
-  <body>
-    <style>
-      #aboutusmenu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 25px;
-        left: -10px;
-        background: white;
-        border: 1px solid #c3c3c3;
-        padding: 5px 0;
-        box-shadow: 0 10px 5px 3px rgba(0, 0, 0, 0.2);
-        border-radius: 10px;
-      }
 
-      #aboutcollegeMenu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 25px;
-        left: -10px;
-        background: white;
-        border: 1px solid #c3c3c3;
-        padding: 5px 0;
-        box-shadow: 0 10px 5px 3px rgba(0, 0, 0, 0.2);
-        border-radius: 10px;
-      }
-    </style>
-    <header id="header">
-      <div class="container">
-        <a href="/" id="logo" title="HarrisonHighSchool">KGUSTA</a>
-        <div class="menu-trigger"></div>
-        <nav id="menu">
-          <ul>
-            <li><a href="{% url 'events' %}">События</a></li>
-            <li><a href="{% url 'departments' %}">О колледже</a></li>
-            <li>
-              <a href="http://spo.ksucta.kg/" target="_blank">EBilim</a>
-            </li>
-          </ul>
-          <ul>
-            <li><a href="{% url 'news' %}">Новости</a></li>
-            <li><a href="#fancy" class="get-contact">Контакты</a></li>
-            <li id="aboutus" style="position: relative">
-              <a href="#">О нас</a>
-              <ol id="aboutusmenu" style="text-align: left">
-                <li>
-                  <a href="{% url 'teachers' %}">Преподователи</a>
-                </li>
-                <li>
-                  <a href="{% url 'students' %}">Студентам</a>
-                </li>
-                <li>
-                  <a href="{% url 'students' %}">Абитуриентам</a>
-                </li>
-              </ol>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+<head>
+  {% load static %}
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="icon" href="{% static " /images/logo@2x.png" %}">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" />
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" media="all" href="{% static '/css/style.css' %}" />
+  <title>КГУСТА</title>
+</head>
 
-    {% block content %} {% endblock %}
+<body>
+  <style>
+    #aboutusmenu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 25px;
+      left: -10px;
+      background: white;
+      border: 1px solid #c3c3c3;
+      padding: 5px 0;
+      box-shadow: 0 10px 5px 3px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+    }
 
-    <div id="fancy">
-      <h2>Форма для обратной связи</h2>
-      <form action="#">
-        <div class="left">
-          <fieldset class="mail">
-            <input placeholder="Ваша почта..." type="text" />
-          </fieldset>
-          <fieldset class="name">
-            <input placeholder="Имя..." type="text" />
-          </fieldset>
-          <fieldset class="subject">
-            <select>
-              <option>Студент</option>
-              <option>Родитель</option>
-              <option>Учитель</option>
-              <option>Абитуриент</option>
-            </select>
-          </fieldset>
-        </div>
-        <div class="right">
-          <fieldset class="question">
-            <textarea placeholder="Обращение..."></textarea>
-          </fieldset>
-        </div>
-        <div class="btn-holder">
-          <button class="btn blue" type="submit">Отправить</button>
-        </div>
-      </form>
+    #aboutcollegeMenu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 25px;
+      left: -10px;
+      background: white;
+      border: 1px solid #c3c3c3;
+      padding: 5px 0;
+      box-shadow: 0 10px 5px 3px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+    }
+  </style>
+  <header id="header">
+    <div class="container">
+      <a href="/" id="logo" title="HarrisonHighSchool">KGUSTA</a>
+      <div class="menu-trigger"></div>
+      <nav id="menu">
+        <ul>
+          <li><a href="{% url 'events' %}">События</a></li>
+          <li><a href="{% url 'departments' %}">О колледже</a></li>
+          <li>
+            <a href="http://spo.ksucta.kg/" target="_blank">EBilim</a>
+          </li>
+        </ul>
+        <ul>
+          <li><a href="{% url 'news' %}">Новости</a></li>
+          <li><a href="#fancy" class="get-contact">Контакты</a></li>
+          <li id="aboutus" style="position: relative">
+            <a href="{% url 'about-us' %}">О нас</a>
+            <ol id="aboutusmenu" style="text-align: left">
+              <li>
+                <a href="{% url 'teachers' %}">Преподователи</a>
+              </li>
+              <li>
+                <a href="{% url 'students' %}">Студентам</a>
+              </li>
+              <li>
+                <a href="{% url 'students' %}">Абитуриентам</a>
+              </li>
+            </ol>
+          </li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <footer id="footer">
-      <div class="container">
-        <section class="row">
-          <article class="cols-1 col-4">
-            <h3>Наши контакты</h3>
-            <ul>
-              <li class="address">
-                <a href="#">Малдыбаева, <br />36/1</a>
-              </li>
-              <li class="mail"><a href="#">college.ksucta1@gmail.com</a></li>
-              <li class="phone last"><a href="#">+ (996) 312-59-53-92</a></li>
-            </ul>
-          </article>
-          <article class="cols-3 col-4">
-            <h3>Мы в соц. сетях</h3>
-            <ul>
-              {% comment %} {#
-              <li class="facebook"><a href="#">Facebook</a></li>
-              #} {#
-              <li class="google-plus"><a href="#">Google+</a></li>
-              #} {#
-              <li class="twitter"><a href="#">Twitter</a></li>
-              #} {% endcomment %}
-              <li class="">
-                <a href="https://www.instagram.com/college_ksucta.kg/"
-                  ><img
-                    style="width: 24px; position: absolute; top: 6px; left: 9px"
-                    src="https://cdn2.iconfinder.com/data/icons/social-icons-grey/512/INSTAGRAM-512.png"
-                    alt=""
-                  />Instagram</a
-                >
-              </li>
-              <li class=""><a href="admin">Admin</a></li>
-            </ul>
-          </article>
-          <article class="cols-4 col-4">
-            <h3>Cвязаться</h3>
-            <p>Здесь можно написать какой нибудь текст...</p>
-            <form action="#">
-              <input placeholder="Ваш адрес..." type="text" />
-              <button type="submit">Отправить</button>
-            </form>
-            <ul>
-              <li><a href="#"></a></li>
-            </ul>
-          </article>
-        </section>
-        <p class="copy">
-          СПО (Колледж) Кыргызского Государственного Университета Строительства
-          Транспорта и Архитектуры им. Н. Исанова.
-          <a href="" target="_blank">Copyright © 2020. </a>Все права защищены.
-        </p>
+  {% block content %} {% endblock %}
+
+  <div id="fancy">
+    <h2>Форма для обратной связи</h2>
+    <form action="#">
+      <div class="left">
+        <fieldset class="mail">
+          <input placeholder="Ваша почта..." type="text" />
+        </fieldset>
+        <fieldset class="name">
+          <input placeholder="Имя..." type="text" />
+        </fieldset>
+        <fieldset class="subject">
+          <select>
+            <option>Студент</option>
+            <option>Родитель</option>
+            <option>Учитель</option>
+            <option>Абитуриент</option>
+          </select>
+        </fieldset>
       </div>
-    </footer>
+      <div class="right">
+        <fieldset class="question">
+          <textarea placeholder="Обращение..."></textarea>
+        </fieldset>
+      </div>
+      <div class="btn-holder">
+        <button class="btn blue" type="submit">Отправить</button>
+      </div>
+    </form>
+  </div>
 
-    <script defer src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script defer src="{% static 'js/plugins.js' %}"></script>
-    <script defer src="{% static 'js/main.js' %}"></script>
-  </body>
+  <footer id="footer">
+    <div class="container">
+      <section class="row">
+        <article class="cols-1 col-4">
+          <h3>Наши контакты</h3>
+          <ul>
+            <li class="address">
+              <a href="#">Малдыбаева, <br />36/1</a>
+            </li>
+            <li class="mail"><a href="#">college.ksucta1@gmail.com</a></li>
+            <li class="phone last"><a href="#">+ (996) 312-59-53-92</a></li>
+          </ul>
+        </article>
+        <article class="cols-3 col-4">
+          <h3>Мы в соц. сетях</h3>
+          <ul>
+            {% comment %} {#
+            <li class="facebook"><a href="#">Facebook</a></li>
+            #} {#
+            <li class="google-plus"><a href="#">Google+</a></li>
+            #} {#
+            <li class="twitter"><a href="#">Twitter</a></li>
+            #} {% endcomment %}
+            <li class="">
+              <a href="https://www.instagram.com/college_ksucta.kg/"><img
+                  style="width: 24px; position: absolute; top: 6px; left: 9px"
+                  src="https://cdn2.iconfinder.com/data/icons/social-icons-grey/512/INSTAGRAM-512.png"
+                  alt="" />Instagram</a>
+            </li>
+            <li class=""><a href="admin">Admin</a></li>
+          </ul>
+        </article>
+        <article class="cols-4 col-4">
+          <h3>Cвязаться</h3>
+          <p>Здесь можно написать какой нибудь текст...</p>
+          <form action="#">
+            <input placeholder="Ваш адрес..." type="text" />
+            <button type="submit">Отправить</button>
+          </form>
+          <ul>
+            <li><a href="#"></a></li>
+          </ul>
+        </article>
+      </section>
+      <p class="copy">
+        СПО (Колледж) Кыргызского Государственного Университета Строительства
+        Транспорта и Архитектуры им. Н. Исанова.
+        <a href="" target="_blank">Copyright © 2020. </a>Все права защищены.
+      </p>
+    </div>
+  </footer>
+
+  <script defer src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script defer src="{% static 'js/plugins.js' %}"></script>
+  <script defer src="{% static 'js/main.js' %}"></script>
+</body>
+
 </html>

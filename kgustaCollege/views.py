@@ -13,13 +13,27 @@ def main(request):
 
 
 def about_us(request):
-    about_us_info = AboutUs.objects.all()
-    return render(request, 'aboutUs/aboutUs.html',
-                  {"about_us_info": about_us_info})
+    return render(request, 'aboutUs/aboutUs.html')
 
-# def abiturentos(request):
-#     a = ForEnrollee.objects.all()
-#     return render(request, 'enrollee/enrollee.html', {"enrollees": a})
+def plans(request):
+    return render(request, 'plans/plans.html')
+    
+def job_introduction(request):
+    return render(request, 'job_introduction/job_introduction.html')
+
+def directorate(request):
+    return render(request, 'directorate/directorate.html')
+
+def provisions(request):
+    return render(request, 'provisions/provisions.html')
+
+def for_enrolles(request):
+    for_enrolles = ForEnrollee.objects.all()
+    return render(request, 'for_enrolles/for_enrolles.html', {"for_enrolles": for_enrolles})
+
+def for_students(request):
+    for_students = ForStudents.objects.all()
+    return render(request, 'for_students/for_students.html', {"for_students": for_students})
 
 def students(request):
     students = ForStudents.objects.all()

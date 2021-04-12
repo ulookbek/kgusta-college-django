@@ -1,0 +1,20 @@
+
+{% load static %}
+
+<div class="col-12 mb-4 baseBlueColor">
+
+<a {% if new_page %} href="{% url link %}" {% else %} href="{% static link %}" target="_blank" {% endif %} class="card baseBlueColor" style="color: #008bc4;">
+                    <div class="card-body">
+                        <div class="row text-sm-center text-md-left">
+                            <span class="col-sm-12 col-md-1 text-sm-center text-md-left rounded-circle">
+                                <i class="fas fa-graduation-cap" style="font-size: 48px;"></i>
+                            </span>
+                            <div class=" media-body col-sm-12 col-md-11">
+                                <h3 class="dark-grey-text mt-3 h1" style="font-family: 'BebasNeue'; font-size: 25px;">
+                                    {{title}}</h3>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+            </div>

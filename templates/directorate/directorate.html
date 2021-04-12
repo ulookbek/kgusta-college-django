@@ -1,0 +1,22 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div class="container my-5">
+  <section class="dark-grey-text">
+    <h3 class="text-center font-weight-bold mb-4 pb-2">
+      Директорат СПО (Колледж) КГУСТА им.Н.Исанова
+    </h3>
+    <hr class="w-header" />
+    <div class="row">
+      {% include "directorate/directorate.component.html" with fullname="Дербишева Эльмира Дупеновна" description="директор, доктор экономических наук, доцент" img="images/teachers/Derbisheva.jpeg" %} 
+      {% include "directorate/directorate.component.html" with fullname="Алиева Айзада Асанбековна" description="заместитель директора по учебной работе" img="images/teachers/Alieva.jpeg" %}
+      {% include "directorate/directorate.component.html" with fullname="Канаев Марсель Джекшембаевич" description="заместитель директора по воспитательной работе" img="images/teachers/Kanayev.jpeg" %} 
+      {% include "directorate/directorate.component.html" with fullname="Бегматова Жайнагуль" description="заведующая учебной частью" img="images/teachers/Begmatova.jpeg" %} 
+      {% include "directorate/directorate.component.html" with fullname="Болотов Таалайбек Турсункулович" description="заведующий инженерно-техническим отделением,  кандидат технических наук, доцент" img="images/teachers/Bolotov.jpeg" %} 
+      {% include "directorate/directorate.component.html" with fullname="Ткачева Бермет Темирбековна" description="заведующая отделением управления и ИТ" img="images/teachers/Tkacheva.jpeg" %}
+      {% include "directorate/directorate.component.html" with fullname="Осмоналиева Жийдегуль Кариевна" description="заведующая общеобразовательным отделением" img="images/teachers/Osmonalieva.jpeg" %}
+      {% include "directorate/directorate.component.html" with fullname="Бирисманов Эркин Жолунбекович" description="руководитель производственной практики" img="images/teachers/Birismanov.jpeg" %}
+      {% include "directorate/directorate.component.html" with fullname="Алиев Атай Усенович" description="военный руководитель" img="images/teachers/Aliev.jpeg" %}
+    </div>
+  </section>
+</div>
+
+{% endblock %}

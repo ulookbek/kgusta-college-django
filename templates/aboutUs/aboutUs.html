@@ -1,53 +1,26 @@
 {% extends 'base.html' %}
+{% load static %}
+
 
 
 {% block content %}
-    <style>
-        .about_us_boxes {
-            text-transform: uppercase;
-        }
-
-        .about_us_boxes:hover {
-            background-color: #0f74a8;
-            color: white;
-            transition: all ease-out 0.5s;
-            cursor: pointer;
-        }
-
-        .about_us_title {
-            font-size: 30px;
-            color: #7e8798;
-            font-family: "BebasNeue";
-        }
-    </style>
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <div class="container">
+<div class="container my-5">
+    <section class="dark-grey-text">
+        <h3 class="text-center font-weight-bold mb-4 pb-2">О нас
+        </h3>
+        <hr class="w-header">
         <div class="row">
-            <div class="col-md-12">
-                <div class="section-title text-center wow zoomIn">
-                    <h1 class="text-center">О НАС</h1>
-                </div>
-            </div>
+              {% include "aboutUs/aboutUs.component.html" with link="/files/mission_spo.pdf" title="Миссия СПО (Колледж)"%} 
+              {% include "aboutUs/aboutUs.component.html" with link="/files/goals.pdf" title="Цели задачи СПО (Колледж)"%} 
+              {% include "aboutUs/aboutUs.component.html" with link="/files/key_tasks.pdf" title="Ключевые задачи СПО (Колледж)"%}
+              {% include "aboutUs/aboutUs.component.html" with link="provisions" title="Положения" new_page=True%}
+              {% include "aboutUs/aboutUs.component.html" with link="plans" title="Планы" new_page=True%}
+              {% include "aboutUs/aboutUs.component.html" with link="job_introduction" title="Должностные инструкции" new_page=True%}
+              {% include "aboutUs/aboutUs.component.html" with link="directorate" title="Директорат СПО (Колледж)" new_page=True%}
         </div>
-        <div class="row text-center">
-            {% for aboutUs in about_us_info %}
-                <a href="{{ aboutUs.file.url }}"
-                   class="col-7 about_us_boxes rounded-pill shadow py-4 px-2 my-1 mx-auto">
-                    <h4 class="about_us_title">{{ aboutUs.title }}</h4>
-                </a>
-            {% endfor %}
+    </section>
 
-        </div>
-    </div>
 
-    <br>
-    <br>
-    <br>
-    <br>
+</div>
+
 {% endblock %}
