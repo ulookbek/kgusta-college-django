@@ -107,7 +107,7 @@
 <section class="events">
     <div class="container">
         <h2>События или мероприятия</h2>
-        {% comment %} {% for event in events %}
+         {% for event in events %}
         <article>
             <div class="current-date">
                 <p>{{ event.month }}</p>
@@ -119,7 +119,7 @@
                     больше</a>
             </div>
         </article>
-        {% endfor %} {% endcomment %}
+        {% endfor %} 
         <div class="btn-holder">
             <a style="background-color: #008bc3" class="btn text-white" href="#">Посмотреть все объявления или
                 события</a>
