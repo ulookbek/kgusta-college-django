@@ -51,22 +51,6 @@ TEMPLATES = [
     },
 ]
 
-# WSGI_APPLICATION = 'kgusta_college.wsgi.application'
-
-# Database
-# https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'kgusta_college',
-        'USER': 'admin',
-        'PASSWORD': '123123',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
-    }
-}
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
