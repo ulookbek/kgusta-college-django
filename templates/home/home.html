@@ -78,28 +78,19 @@
 <section class="news">
     <div class="container">
         <h2>Новости</h2>
-        <article>
-            <div class="pic"><img src="{% static './images/kgusta_bG_3.jpg' %}" alt="" style="max-width: 190px"></div>
+        {% for new in news %}
+            <article>
+            <div class="pic"><img src="{{ new.images.url }}" alt="" style="max-width: 190px"></div>
             <div class="info">
-                <h4>А это заголовок этих новостей для колледжа</h4>
+                <h4>{{ new.title }}</h4>
                 <p class="date">Здесь дата 12\12\2020</p>
-                <p>А тут уже какое то описание под эту новость, короче тоже
-                    бессмысленно</p>
-                <a class="more" href="#">Читать больше</a>
+                <p style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">{{ new.description }}</p>
+                <a class="more" href="{% url 'news' %}">Читать больше</a>
             </div>
         </article>
-        <article>
-            <div class="pic"><img src="{% static './images/kgusta_bG_3.jpg' %}" alt="" style="max-width: 190px"></div>
-            <div class="info">
-                <h4>А это заголовок этих новостей для колледжа</h4>
-                <p class="date">Здесь дата 12\12\2020</p>
-                <p>А тут уже какое то описание под эту новость, короче тоже
-                    бессмысленно</p>
-                <a class="more" href="#">Читать больше</a>
-            </div>
-        </article>
+        {% endfor %}
         <div class="btn-holder">
-            <a class="btn" href="#">Посмотреть все новости</a>
+            <a class="btn" href="{% url 'news' %}">Посмотреть все новости</a>
         </div>
     </div>
 </section>
@@ -121,7 +112,7 @@
         </article>
         {% endfor %} 
         <div class="btn-holder">
-            <a style="background-color: #008bc3" class="btn text-white" href="#">Посмотреть все объявления или
+            <a style="background-color: #008bc3" class="btn text-white" href="{% url 'events' %}">Посмотреть все объявления или
                 события</a>
         </div>
     </div>

@@ -6,8 +6,10 @@ from kgustaCollege.models import Teachers, Events, Departments, News, AboutUs, \
 
 def main(request):
     all_events = Events.objects.all()[:4]
+    all_news = News.objects.all()[:2]
     context = {
         "events": all_events,
+        "news": all_news,
     }
     return render(request, 'home/home.html', context)
 

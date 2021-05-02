@@ -8,14 +8,14 @@
     {% for n in news %}
     <div class="card mb-3" style="max-width: 100%">
       <div class="row g-0">
-        <div class="col-md-4">
+        <div class="col-md-12">
           <img
-            style="max-width: 200px"
+            style="max-width: 600px"
             src="{{ n.images.url }}"
             alt="Card image cap"
           />
         </div>
-        <div class="col-md-8">
+        <div class="col-md-12">
           <div class="card-body">
             <h5 class="card-title">{{ n.title }}</h5>
             <p class="card-text">{{ n.description }}</p>
